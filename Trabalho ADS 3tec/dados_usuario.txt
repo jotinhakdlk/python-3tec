@@ -1,3 +1,13 @@
 
-Nome: Vinicius Lima | Idade= 17 | Telefone: 876543234567
-Nome: Lucas | Idade= 40 | Telefone: 876543234567
+Nome: Jo�o | Idade: 17 | Telefone: 81273182731
+Nome: Lucas | Idade: 8000 | Telefone: 1962183612
+Nome: Vinicius | Idade: 17 | Telefone: 1927319273
+Nome: Roberto | Idade: 40 | Telefone: 102831203
+Nome: Jo�o2 | Idade: 70 | Telefone: 12315237125
+Nome: john doe | Idade: 10 | Telefone: 1023102
+Nome: jona doe | Idade: 12 | Telefone: 9127364
+Nome: teste | Idade: 90 | Telefone: 1928314
+Nome: Kudlake | Idade: 2912 | Telefone: i91721864
+Nome: leon | Idade: 24 | Telefone: 192863461
+Nome: Amanda | Idade: 32 | Telefone: 17351278361
+Nome: Lorenzo | Idade: 15 | Telefone: 1294716142

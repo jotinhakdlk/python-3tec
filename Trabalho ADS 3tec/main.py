@@ -7,7 +7,7 @@ loop = True
 ##Mensagem convidativa no terminal
 print("Olá! Gostaria de coletar seus dados inutilmente")
 
-while(loop):
+def repete():
 
     ##Responsável por coletar os dados do usuário
     print("Qual seu nome?")
@@ -23,12 +23,16 @@ while(loop):
     ask_continua = input("Resposta: ")
 
 ## Escreve no arquivo 'dados_clientes.txt' os dados coletados
-    coleta_dado.write(f"\nNome: {nome} | Idade= {idade} | Telefone: {telefone}")
+    coleta_dado.write(f"\nNome: {nome} | Idade: {idade} | Telefone: {telefone}")
 
 ## Finaliza o loop, ou não, dependendo da resposta do usuário
     if(ask_continua == 'nao'):
         loop = False
         coleta_dado.close()
+    else:
+        repete()
+    
+repete()
 
 ## Variável resposável por abrir o arquivo com autoridade de apenas ler
 dados = open('dados_usuario.txt', 'r')
