@@ -11,15 +11,3 @@ def criar_conta(numero, titular, saldo ,limite):
     return conta
 
 conta = criar_conta(345, 'João', 200.0, 1000.0)
-
-def depositar(conta, valor):
-    conta['saldo'] += valor
-
-def sacar(conta, valor):
-    conta['saldo'] -= valor
-
-def extrato(conta):
-    print(f'Seu saldo é {conta['saldo']}')
-
-sacar(conta, 1000)
-extrato(conta)
