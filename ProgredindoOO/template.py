@@ -1,35 +1,39 @@
-class Filmes:
-    def __init__(self, nome, ano, duracao):
-        self.__nome = nome.title()
+class Programas:
+    def __init__(self, nome, ano):
+        self._nome = nome.title()
         self.ano = ano
-        self.duracao = duracao
-        self.__curtir = 0
-
-    def curtida(self):
-        self.curtir += 1
- 
-class Series:
-    def __init__(self, nome, ano, temporadas):
-        self.__nome = nome
-        self.ano = ano
-        self.temporadas = temporadas
-        self.__curtir = 0
-
+        self._curtir = 0
+    
     @property
     def valor_curtir(self):
-        return self.__curtir
+        return self._curtir
     
     @property
     def valor_nome(self):
-        return self.__nome
-
+        return self._nome
+    
     def curtida(self):
-        self.curtir += 1
+        self._curtir += 1
+
+class Filmes(Programas):
+    def __init__(self, nome, ano, duracao):
+        super().__init__(nome,ano)
+        self.duracao = duracao
+
+class Series(Programas):
+    def __init__(self, nome, ano, temporadas):
+        super().__init__(nome,ano)
+        self.temporadas = temporadas
+
+
 
 BreakingBad = Series("Breaking Bad", 2008, 5)
-print(f'Nome: {BreakingBad.nome} - Ano: {BreakingBad.ano} - Temporadas: {BreakingBad.temporadas}')
 BeeMovie = Filmes("Bee Movie", 2007, 91)
-print(f'Nome: {BeeMovie.nome} - Ano: {BeeMovie.ano} - Minutos: {BeeMovie.duracao}')
+
+filmes_series = [BreakingBad, BeeMovie]
 
 BreakingBad.curtida()
-print(BreakingBad.curtir)
+
+for programas in filmes_series:
+    detalhe = programas.duracao if hasattr(programas, 'duracao')
+    print(f"")
