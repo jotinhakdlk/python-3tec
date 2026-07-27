@@ -15,16 +15,22 @@ class Programas:
     def curtida(self):
         self._curtir += 1
 
+
 class Filmes(Programas):
     def __init__(self, nome, ano, duracao):
         super().__init__(nome,ano)
         self.duracao = duracao
+
+    def imprime(self):
+        print(f"{self.valor_nome} - {self.ano} - {self.duracao} mins - {self._curtir} curtidas")
 
 class Series(Programas):
     def __init__(self, nome, ano, temporadas):
         super().__init__(nome,ano)
         self.temporadas = temporadas
 
+    def imprime(self):
+        print(f"{self.valor_nome} - {self.ano} - {self.temporadas} temporadas - {self._curtir} curtidas")
 
 
 BreakingBad = Series("Breaking Bad", 2008, 5)
@@ -35,5 +41,7 @@ filmes_series = [BreakingBad, BeeMovie]
 BreakingBad.curtida()
 
 for programas in filmes_series:
-    detalhe = programas.duracao if hasattr(programas, 'duracao')
-    print(f"")
+    if hasattr(programas, 'duracao'):
+        programas.imprime()
+
+
