@@ -35,15 +35,35 @@ class Series(Programas):
     def __str__(self):
         return f"{self.valor_nome} - {self.ano} - {self.temporadas} temporadas - {self._curtir} curtidas"
 
+class Playlist:
+    def __init__(self, nomePl, elementos):
+        self.nomePl = nomePl
+        self.programas = elementos
+    
+    def tamanho(self):
+        return len(self.programas)
 
+#Series
 BreakingBad = Series("Breaking Bad", 2008, 5)
+CobraKai = Series("CobraKai", 2018, 6)
+
+##Filmes
 BeeMovie = Filmes("Bee Movie", 2007, 91)
+Minecraft = Filmes("Um Filme Minecraft", 2025, 101)
 
-filmes_series = [BreakingBad, BeeMovie]
-
+#Curtidas
 BreakingBad.curtida()
+CobraKai.curtida()
+CobraKai.curtida()
+Minecraft.curtida()
+Minecraft.curtida()
+Minecraft.curtida()
 
-for programas in filmes_series:
+
+filmes_series = [BreakingBad, CobraKai, BeeMovie, Minecraft]
+plFim_de_semana = Playlist("Fim de Semana", filmes_series)
+
+for programas in plFim_de_semana.elementos:
         print(programas)
 
-
+## nomePl = nome da playlist
