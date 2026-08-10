@@ -44,9 +44,14 @@ class Playlist:
         def listagem(self):
             return self._elementos
         
-        @property
-        def tamanho(self):
+        def __getitem__(self ,item):
+            return self._elementos[item]
+        
+        def __len__(self):
             return len(self._elementos)
+            
+
+            
     
 
 
@@ -69,10 +74,23 @@ Minecraft.curtida()
 filmes_series = [BreakingBad, CobraKai, BeeMovie, Minecraft]
 plFim_de_semana = Playlist("Fim de Semana", filmes_series)
 
-print(f"Tamanho da playlist: {len(plFim_de_semana)}")
-print(f"Está na lista? {BeeMovie in plFim_de_semana}")
+#print(f"Tamanho da playlist: {len(plFim_de_semana)}")
+#print(f"Está na lista? {BeeMovie in plFim_de_semana}")
 
 for programas in plFim_de_semana._elementos:
         print(programas)
 
 ## nomePl = nome da playlist
+
+
+#Pyhton Data Model
+#Inicializaão: __init__
+#Representação: __str__, __repr__
+#Container/Sequência: __contains__, __iter__, __len__, __getitem__
+#Numéricas: __add__, __sub__, __mul__, __mod__
+
+#Pyhton Data Model, exemplos
+#Inicializaão: objt = Novo()
+#Representação: print(obj), str(obj), repr(obj)
+#Container/Sequência: len(obj, item in obj, for in obj, obj[2:3]
+#Numéricas: obj + outro_obj, obj * obj
